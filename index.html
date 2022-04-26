@@ -31,26 +31,64 @@
 
       /* Write CSS Here */
 
+      .two-column-grid__expand-two {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        column-gap:5px;
+      }
+
+      .logo {
+        display: grid;
+        border: dashed green 2px;
+      }
+
       .three-column-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 5px;
       }
 
       .three-column-grid__expand-two {
+        display: grid;
+        grid-template-columns: 0.05fr 1fr 0.05fr;
+        column-gap: 5px;
       }
 
       .five-column-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 5px;
       }
 
       .center-grid {
+        display:grid;
+        place-items: center;
       }
 
       .centered {
+        width: 25%;
+
       }
 
       /* Grid within Grid Section */
       /* Practice re-using classes */
 
       .two-column-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5px;
       }
+
+      .box {
+        display: grid;
+        grid-auto-flow: column;
+      }
+
+      .grid-within-grid {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+      }
+
     </style>
   </head>
   <body>
@@ -112,7 +150,7 @@
     </div>
     <div>
       <h2>Grid within Grid #2 (Expansion)</h2>
-      <div class="container">
+      <div class="container grid-within-grid">
         <div class="box">
           <div class="inner-box"></div>
         </div>
